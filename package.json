@@ -92,6 +92,12 @@
     ]
   },
   "packageManager": "pnpm@9.15.6",
+  "pnpm": {
+    "_comment": "Temporary workaround for Dependabot alert #86: Force form-data to 4.0.4 to fix security vulnerability",
+    "overrides": {
+      "form-data": "4.0.4"
+    }
+  },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
     "commit-msg": "pnpm commitlint --edit $1 && pnpm check:spelling $1"
